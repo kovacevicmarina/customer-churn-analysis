@@ -58,6 +58,7 @@ Key Findings
 6.	Enterprise customers generate the highest revenue ($14.2M) despite not being the largest segment
 
 Power BI Dashboard
+
 The interactive dashboard includes:
 •	4 KPI cards — Total Customers, Churn Rate, Total Revenue, Revenue Lost
 •	Churn by Plan — churn rate comparison across account types
@@ -66,6 +67,11 @@ The interactive dashboard includes:
 •	Revenue by Plan — total revenue per segment
 •	Customer Distribution — customer share by plan
 •	Interactive filters — Account Type, Tenure, Payment Method, Customer Segment
+
+## Customer Churn Dashboard
+![Dashboard](https://raw.githubusercontent.com/kovacevicmarina/customer-churn-analysis/main/Dashboard.png)
+
+
 
 Business Recommendations
 •	High Churn in Early Customer Lifecycle
@@ -83,6 +89,8 @@ Business Impact
 •	Reducing early-stage churn by even 5% could significantly increase customer lifetime value
 •	Improving support experience could directly reduce churn among high-risk users
 •	Targeting Basic plan customers with retention strategies may deliver the highest investments
+
+
 
 Author
 Marina Kovačević
