@@ -4,6 +4,9 @@
 Customer churn is one of the most critical challenges in subscription-based businesses.
 This project analysis churn behaviour across different customer segments to identify high-risk groups and provide actionable recommendations for improving customer retention and revenue stability.
 
+## Customer Churn Dashboard
+![Dashboard](https://raw.githubusercontent.com/kovacevicmarina/customer-churn-analysis/main/Dashboard.png)
+
 ## Executive Summary
 *   **Churn rate is 18.71%, with early-stage customers (0–12 months) being the most at risk (~30%)**
 *   **Basic plan customers churn significantly more than Premium and Enterprise segments**
@@ -69,10 +72,6 @@ The interactive dashboard includes:
 *   **Revenue by Plan — total revenue per segment**
 *   **Customer Distribution — customer share by plan**
 *   **Interactive filters — Account Type, Tenure, Payment Method, Customer Segment**
-
-## Customer Churn Dashboard
-![Dashboard](https://raw.githubusercontent.com/kovacevicmarina/customer-churn-analysis/main/Dashboard.png)
-
 
 
 ## Business Recommendations
