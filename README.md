@@ -58,7 +58,7 @@ A subscription-based company is experiencing a churn rate of 18.71%, resulting i
 *   **Overall churn rate is 18.71%, affecting 1,871 out of 10,000 customers**
 *   **Basic plan customers churn the most (24.52%), compared to ~16% for Premium and Enterprise**
 *   **Early-stage customers (0–12 months) have the highest churn (~30%), vs ~10% for long-term customers**
-*   **Customers with 9+ support calls have a churn rate above 30%, compared to less than 10% for customers with fewer than 5 calls**
+*   **Customers with 13+ support calls have a churn rate above 38%, compared to less than 10% for customers with fewer than 5 calls**
 *   **Payment method has minimal impact on churn behaviour**
 *   **Enterprise customers generate the highest revenue ($14.2M) despite not being the largest segment**
 
