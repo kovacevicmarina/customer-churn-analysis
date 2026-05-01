@@ -1,91 +1,202 @@
-<h1 align="center">Customer Churn Analysis</h1>
+<h1 align="center">🚀 Customer Churn Analysis</h1>
 
-## Project Overview
-Customer churn is one of the most critical challenges in subscription-based businesses.
-This project analysis churn behaviour across different customer segments to identify high-risk groups and provide actionable recommendations for improving customer retention and revenue stability.
+<h3>Excel · MySQL · Power BI · SQL View Architecture</h3>
 
-## Customer Churn Dashboard
-![Dashboard](https://raw.githubusercontent.com/kovacevicmarina/customer-churn-analysis/main/Dashboard.png)
+End-to-end churn analysis project covering data cleaning, validation, risk modeling, and interactive dashboards — built with MySQL, Excel, and Power BI.
+________________________________________
+Project Overview
+This project represents a complete churn analysis workflow, starting with data cleaning and transformation in SQL, continuing with validation and exploratory analysis in Excel, and finishing with a 3-page interactive dashboard in Power BI.
+The goal of the project is to analyze customer churn behavior, identify key risk factors, and quantify revenue impact to support data-driven retention strategies.
 
-## Executive Summary
-*   **Churn rate is 18.71%, with early-stage customers (0–12 months) being the most at risk (~30%)**
-*   **Basic plan customers churn significantly more than Premium and Enterprise segments**
-*   **High number of support calls is the strongest predictor of churn**
-*   **Enterprise customers generate the highest revenue and have the lowest churn rate**
-*   **Reducing early churn and improving support experience could significantly increase retention and revenue**
+📅 Data Period: 2025
+🛠 Analysis Performed: 2026
+
+________________________________________
+## Dashboard Preview
+
+🔵 Overview – Customer Churn Summary
+
+![Overview](images/Overview.png)
+High-level view of churn rate, total revenue, and lost revenue.
+<br>
+<br>
+
+🔵 Drivers – Churn Analysis
+
+![Drivers](images/Drivers.png)
+Analysis of key churn drivers such as tenure, support calls, and account type.
+<br>
+<br>
+
+🔵 Risk & Action – Retention Opportunities
+ 
+ ![Risk&Action](images/Risk&Action.png)
+Focus on high-risk customers and revenue at risk for proactive retention.
+<br>
+<br>
+
+________________________________________
+
+## 📁 Project Structure
+| File | Description |
+|------|-------------|
+| `customers.sql` | Data cleaning, transformations, and analytical views |
+| `customer_churn.xlsx` | Data validation and pivot analysis |
+| `customer_churn_power_bi.pbix` | 3-page Power BI dashboard |
+| `images/` | Dashboard screenshots: Overview, Drivers, Risk&Action  |
+
+________________________________________
+
+## 🗄️MySQL – Data Cleaning & Analytical Model
+#### Data Preparation
+The dataset was cleaned and standardized using SQL:
+*  Date conversion (last_login_date, churn_date)
+*  Handling NULL values
+*  Data type corrections
+*  Validation checks (duplicates, missing values)
 
 
-## Problem Statement  
+#### SQL Architecture (View-Based Design)
+A structured analytical model was built using SQL views:
+*  vw_customer_metrics — core customer-level metrics (CLV, risk segment, lifecycle)
+*  vw_churn_analysis — churn and lost revenue calculation
+*  vw_executive_summary — KPI aggregation layer
+*  vw_risk_summary — risk segmentation overview
+*  vw_high_risk_customers — actionable customer list
+*  vw_customer_ranking — ranking customers by value (window function)
 
-A subscription-based company is experiencing a churn rate of 18.71%, resulting in over $4M in lost revenue.  
+#### SQL Techniques Applied
+*  Data cleaning & transformation
+*  CASE logic (risk segmentation)
+*  Aggregations (SUM, COUNT, AVG)
+*  GROUP BY & HAVING
+*  View creation (modular architecture)
+*  Window functions (RANK)
 
-### The goal of this analysis is to:
-*   **Identify which customer segments churn the most**
-*   **Detect behavioural patterns that predict churn**
-*   **Determine where retention efforts should be focused for maximum impact**
+####  Business Analysis Queries
+*  Churn rate calculation
+*  Lost revenue analysis
+*  Churn by account type
+*  Churn by support activity
+*  Customer segmentation
+*  High-risk customer identification
 
-## Dataset
-*   **Source: Kaggle**
-*   **Size: 10,000 customers**
-*   **Columns: 14 original + 5 engineered features**
+File: customers.sql
+
+________________________________________
+
+## 📋 Excel – Data Validation & Pivot Analysis
+
+The dataset was analyzed in Excel for validation and exploratory insights.
+#### Excel Activities
+*  Data validation and consistency checks
+*  Creating Pivot Tables:
+    *  Churn by segment
+    *  Churn by tenure group
+    *  Support calls distribution
+
+File: customer_churn.xlsx
+________________________________________
+## 📈 Power BI – 3-Page Interactive Dashboard
+
+Power BI was used to build a business-oriented dashboard focused on churn analysis and retention strategy.
+
+#### 🔵 Page 1 · Overview
+
+👉 What is happening?
+
+| Metric | Value |
+|--------|-------|
+| Total Customers| 10,000 |
+| Churn Rate | 18.71% |
+| Retention Rate | 81.29% |
+| Total Revenue |$29.27M|
+| Lost Revenue | $4.04M |
+
+Includes KPI cards, revenue breakdown, and customer distribution.
+
+
+#### 🔵 Page 2 · Churn Drivers
+
+👉 Why is it happening?
+
+| Metric | Value |
+|--------|-------|
+| Avg Tenure | 29 |
+| Avg Support Calls | 18.71% |
+| Critical Support Churn | 34.78% |
+| Lost Revenue | $4.04M |
+
+Focuses on identifying churn drivers such as lifecycle stage, support activity, and account type.
+
+
+#### 🔵 Page 3 · Risk & Action
+
+👉 What should we do?
+
+| Metric | Value |
+|--------|-------|
+| High-Risk Customers | 535 |
+| At-Risk Revenue | $8.32M |
+| Avg Risk CLV | $428|
+| Potential Saving | 28% |
+
+Highlights at-risk customers and prioritizes retention opportunities.
+
+### 📐 Key Metrics (DAX Measures)
+The dashboard is built around key business metrics designed to track churn, revenue impact, and retention opportunities:
+*  Churn Rate (%) — percentage of customers who churned 
+*  Lost Revenue — total revenue lost due to churn 
+*  At-Risk Revenue — revenue from customers likely to churn 
+*  High-Risk Customers — number of customers flagged as high risk 
+*  Average CLV — average customer lifetime value
+
+#### 🔑 Key Findings
+1.	18.71% churn rate (1,871 customers lost)
+2.	Early-stage churn is critical (~30%)
+3.	Support calls strongly impact churn
+4.	Basic plan has highest churn risk
+5.	VIP customers drive highest revenue impact
+6.	535 high-risk customers represent $8.32M at risk
+
+#### 🚀 Project Outcome
+This dashboard enables:
+*  Identification of key churn drivers
+*  Quantification of revenue loss and risk
+*  Prioritization of high-risk customers
+*  Data-driven retention strategies
   
-### Engineered Features
-*   **customer_segment  - VIP / Premium / Basic**
-*   **total_paid  - Total revenue generated by customer**
-*   **tenure_group — grouped customer lifecycle (0-12, 12-24, 24-48, 48+ months)**
-*   **support_call_group — grouped support interaction levels**
-*   **churn_numeric — binary churn indicator (1 = churn, 0 = active)**
+File: customer_churn_power_bi.pbix
 
-## Tools & Technologies
-*   **Excel — data cleaning, pivot tables, exploratory analysis**
-*   **MySQL — data preparation, type correction, segmentation, and SQL analysis**
-*   **Power BI — interactive dashboard, DAX measures, data visualization**
-  
-## SQL Analysis
-*   **Overall Churn Rate**
-*   **Churn by Account Type**
-*   **Churn by Tenure**
-*   **Churn vs Support Calls**
-*   **Churn vs Payment Method**
-*   **Revenue Lost Due to Churn**
-*   **Revenue by Churn Status**
-*   **Revenue by Plan**
-*   **At-Risk Customers**
-*   **High-Value Churned Customers**
-*   **Average Time to Churn**
+________________________________________
 
-### Key Findings
-*   **Overall churn rate is 18.71%, affecting 1,871 out of 10,000 customers**
-*   **Basic plan customers churn the most (24.52%), compared to ~16% for Premium and Enterprise**
-*   **Early-stage customers (0–12 months) have the highest churn (~30%), vs ~10% for long-term customers**
-*   **Customers with 13+ support calls have a churn rate above 34%, compared to less than 10% for customers with fewer than 5 calls**
-*   **Payment method has minimal impact on churn behaviour**
-*   **Enterprise customers generate the highest revenue ($14.2M) despite not being the largest segment**
+## 💼 Business Recommendations
 
-## Power BI Dashboard
+### 🔴 Early Retention
+Improve onboarding (30–60–90 days)
 
-The interactive dashboard includes:
-*   **4 KPI cards — Total Customers, Churn Rate, Total Revenue, Revenue Lost**
-*   **Churn by Plan — churn rate comparison across account types**
-*   **Churn by Tenure — lifecycle churn patterns**
-*   **Support Calls vs Churn — correlation between support activity and churn**
-*   **Revenue by Plan — total revenue per segment**
-*   **Customer Distribution — customer share by plan**
-*   **Interactive filters — Account Type, Tenure, Payment Method, Customer Segment**
+### 🟠 Support Optimization
+Monitor high-support users and react early
 
+### 🟡 Basic Plan Strategy
+Introduce upgrade incentives
 
-## Business Recommendations
-*   **High Churn in Early Customer Lifecycle: Improve onboarding, early engagement, and retention campaigns in the first 3–6 months**
-*   **Low-Value Customers Churn More: Introduce upgrade incentives or improve the value proposition of the Basic plan**
-*   **High Support Interaction = High Churn Risk: Improve support quality, reduce response time, and resolve recurring issues**
-*   **Revenue Risk Concentration: Focus retention efforts on high-value and high-risk customers**
-*   **Enterprise Customers Drive Revenue Stability: Invest in loyalty programs and dedicated account management**
+### 🟢 High-Value Customers
+Focus on VIP & Enterprise retention
 
-## Business Impact
-*   **Reducing early-stage churn by even 5% could significantly increase customer lifetime value**
-*   **Improving support experience could directly reduce churn among high-risk users**
-*   **Targeting Basic plan customers with retention strategies may deliver the highest investments**
+### 📊 Risk-Based Campaigns
+Target top 535 high-risk customers
+________________________________________
 
+## 🛠 Tools & Technologies
+
+| Tool         | Usage                              |
+| ------------ | ---------------------------------- |
+| **Excel**    | Data cleaning & validation         |
+| **MySQL**    | Data modeling, SQL analysis, views |
+| **Power BI** | Dashboard, DAX, visualization      |
+
+________________________________________
 
 
 ## Author
